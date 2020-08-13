@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>td-table-problem</title>
+
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  table, tr, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  td{
+    width: 50px;
+  }
+</style>
+</head>
+<body>
+  <table>
+
+    <!--第一条记录，数据长度不用改行就能全部表示-->
+    <tr>
+      <td>项目1</td>
+      <td>项目2</td>
+      <td>项目3</td>
+    </tr>
+    <tr>
+      <td>第1条</td>
+      <td>第2列</td>
+      <td>
+        <table>
+          <tr>
+            <td>100</td>
+            <td>200</td>
+            <td>300</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!--第二条记录，数据长度必须改行才能全部表示-->
+    <tr>
+      <td>第2条</td>
+      <td>第2列2222222222222222222222222222222222222</td>
+      <td style="padding: 0">
+        <table>
+          <tr>
+            <td>100</td>
+            <td>200</td>
+            <td>300</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
