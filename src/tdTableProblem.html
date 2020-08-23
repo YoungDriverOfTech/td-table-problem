@@ -18,10 +18,18 @@
   td{
     width: 50px;
   }
+
+  .parentTable {
+    height: 80px;
+  }
+
+  .childTable {
+    height: 100%;
+  }
 </style>
 </head>
 <body>
-  <table>
+  <table class="parentTable">
 
     <!--问题描述
       有两条数据，第一条数据长度短，第二条长。 在td宽度已经给定的情况下
@@ -30,6 +38,9 @@
       如果在td里面嵌套一个table， table里面是个一行三列的数据，那么问题来了，
       第二条数据因为被撑高了，我想让第二条数据的项目3的border，和第一条数据一样，能够撑满整个td
       CSS该怎么写？？
+
+
+      答案，给外层的table一个具体的高度，给内层的table高度100%
     -->
 
     <!--第一条记录，数据长度不用改行就能全部表示-->
@@ -57,7 +68,7 @@
       <td>第2条</td>
       <td>第2列2222222222222222222222222222222222222</td>
       <td style="padding: 0">
-        <table>
+        <table class="childTable">
           <tr>
             <td>100</td>
             <td>200</td>
